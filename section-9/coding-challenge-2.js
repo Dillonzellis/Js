@@ -44,8 +44,7 @@ const game = {
 //   1. Loop over the game.scored array and print each player name to the console,
 // along with the goal number (Example: "Goal 1: Lewandowski")
 
-let { scored } = game;
-for (const [i, player] of scored.entries()) {
+for (const [i, player] of game.scored.entries()) {
   // console.log(`Goal: ${i + 1}: ${player}`);
 }
 
@@ -89,5 +88,5 @@ for (const [team, odd] of Object.entries(game.odds)) {
 //  Lewandowski: 2
 // }
 
-const {scorers} = game[scored]
+const scorers = Object.values(game.scored);
 console.log(scorers);
